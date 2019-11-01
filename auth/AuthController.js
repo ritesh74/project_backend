@@ -8,7 +8,7 @@ var VerifyToken = require('./VerifyToken');
 
 router.use(bodyParser.urlencoded({ extended: false }));
 router.use(bodyParser.json());
-var User = require('../user/User');
+var User = require('../routes/User');
 
 router.post('/register',function(req,res){
     var hashedPassword=bcrypt.hashSync(req.body.password,8);
